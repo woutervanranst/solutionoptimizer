@@ -1,4 +1,5 @@
 ﻿using System.Xml.Linq;
+using WouterVanRanst.Utils.Builders;
 
 namespace SolutionOptimizer;
 
@@ -96,7 +97,7 @@ internal static class Program
     static string ToMermaid(List<List<Project>> projects)
     {
         // Create a MermaidGraph instance
-        var mermaidGraph = new MermaidGraph("TD"); // Top-Down (TD) direction for the graph
+        var mermaidGraph = new MermaidGraph("LR");
         mermaidGraph.AddHandler<Project, ProjectGraphHandler>();
         mermaidGraph.AddHandler<Tier, TierGraphHandler>();
 
